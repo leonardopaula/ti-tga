@@ -1,2 +1,1 @@
-ti-tga
-======
+TGA - Teoria da Informação
