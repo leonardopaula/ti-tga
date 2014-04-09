@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package tga1;
 
 /**
@@ -12,37 +6,51 @@ package tga1;
  */
 public class Node {
 
-    private Node    left; 
-    private Node    right; 
-    private int     data;
+    private Node     esq;
+    private Node     dir;
+    private int     peso;
+    private int    valor;
     
-    Node(int newData) { 
-        left = null; 
-        right = null; 
-        data = newData; 
+    public Node(int valor, int peso) {
+        this(valor, peso, null, null);
+    } 
+
+    public Node(int valor, int peso, Node esq, Node dir) {
+        this.valor = valor;
+        this.esq   = esq;
+        this.dir   = dir;
+        this.peso  = peso;
     }
 
-    public Node getLeft() {
-        return left;
+    public Node getEsq() {
+        return esq;
     }
 
-    public Node getRight() {
-        return right;
+    public Node getDir() {
+        return dir;
     }
 
-    public int getData() {
-        return data;
+    public int getPeso() {
+        return peso;
     }
 
-    public void setLeft(Node left) {
-        this.left = left;
+    public int getValor() {
+        return valor;
     }
 
-    public void setRight(Node right) {
-        this.right = right;
+    public void setEsq(Node esq) {
+        this.esq = esq;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setDir(Node dir) {
+        this.dir = dir;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public void setValor(int valor) {
+        this.valor = valor;
     }
 }

@@ -21,7 +21,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        
+        Tree btr = new Tree();
+
         File file = new File("/home/leonardo/NetBeansProjects/ti-tga/TGA1/src/test/opa.txt");
+
         try {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
@@ -30,9 +34,13 @@ public class Main {
             
             int c = 0;
             while((c = reader.read()) != -1) {
-                    char character = (char) c;
-                    System.out.println(Integer.toBinaryString(character));
+                btr.insere(c, 1);
+                //char character = (char) c;
+                //System.out.println(Integer.toBinaryString(character));
+
+                //System.out.println(Integer.toBinaryString(character));
             }
+            btr.inorder();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
